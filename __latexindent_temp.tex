@@ -1,0 +1,109 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% Awesome CV LaTeX Template for CV/Resume
+%
+% This template has been downloaded from:
+% https://github.com/posquit0/Awesome-CV
+%
+% Author:
+% Claud D. Park <posquit0.bj@gmail.com>
+% http://www.posquit0.com
+%
+% Template license:
+% CC BY-SA 4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
+%		
+
+
+%-------------------------------------------------------------------------------
+% CONFIGURATIONS
+%-------------------------------------------------------------------------------
+% A4 paper size by default, use 'letterpaper' for US letter
+\documentclass[12pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+% Awesome Colors: awesome-emerald, awesome-skyblue, awesome-red, awesome-pink, awesome-orange
+%                 awesome-nephritis, awesome-concrete, awesome-darknight,awesome-brown
+\colorlet{awesome}{awesome-orange}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+%\photo[circle,edge,right]{./photo}
+\name{Ishtiaq}{Mahmood Amin}
+\position{Android / React Native Developer{\enskip\cdotp\enskip}Software Engineer}
+\address{A-6, 543, East Kazipara, Mirpur-1216, Dhaka, Bangladesh}{https://goo.gl/maps/kjRRZHkhLjM2}
+
+\mobile{(+880) 1781-106123}
+\email{i4idrhine@gmail.com}
+\github{IronBlossom}
+% \gitlab{gitlab-id}
+\stackoverflow{1016002}{IronBlossom}
+%\twitter{@IAmIronBlossom}
+\skype{iron\_blossom}
+% \reddit{reddit-id}
+\xing{IshtiaqMahmood\_Amin}
+% \extrainfo{extra informations}
+
+%\quote{``Be the change that you want to see in the world."}  % -Gandhi
+%\quote{``Knowledge, like air, is vital to life. Like air, no one should be denied it."} % -Alan Moore
+%\quote{``The only true wisdom is in knowing you know nothing."} %  -Albert Einstein
+%\quote{``Imagination is more important than knowledge."} %  -Albert Einstein
+%\quote{``Your assumptions are your windows on the world. Scrub them off every once in a while, or the light won't come in."} %   -Isaac Asimov
+\quote{``The true delight is in the finding out rather than in the knowing."} %  -Isaac Asimov
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal informations
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Ishtiaq Mahmood Amin~~~·~~~Résumé}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%	Each section is imported separately, open each file in turn to modify content
+%-------------------------------------------------------------------------------
+\input{resume/summary.tex}
+\input{resume/experience.tex}
+%\input{resume/honors.tex}
+\input{resume/projects.tex}
+\input{resume/presentation.tex}
+\input{resume/writing.tex}
+\input{resume/committees.tex}
+\input{resume/education.tex}
+\input{resume/extracurricular.tex}
+
+
+%-------------------------------------------------------------------------------
+\end{document}
