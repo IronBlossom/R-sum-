@@ -146,6 +146,10 @@
 \definecolor{awesome-concrete}{HTML}{95A5A6}
 \definecolor{awesome-darknight}{HTML}{131A28}
 \definecolor{awesome-brown}{HTML}{A04117}
+\definecolor{awesome-matblue}{HTML}{4B657B}
+\definecolor{awesome-turquoise}{HTML}{16A085}
+\definecolor{awesome-facebook}{HTML}{3B5999}
+\definecolor{awesome-linkedin}{HTML}{0077B5}
 \colorlet{awesome}{awesome-red}
 
 % Boolean value to switch section color highlighting
