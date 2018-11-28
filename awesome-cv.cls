@@ -705,6 +705,41 @@
   \vspace{-4.0mm}
 }
 
+% Define an environment for projectentry
+\newenvironment{projectentries}{%
+  \vspace{\acvSectionContentTopSkip}
+  \begin{center}
+}{%
+  \end{center}
+}
+% Define an entry of project information
+% Usage: \projectentry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\projectentry}[3]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{4.5cm} R{12.5cm}}
+    \ifempty{#1#2}
+    {\\}
+    {\honorpositionstyle{#1} & \entrylocationstyle{#2} \\}
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
+  \end{tabular*}%
+}
+
+% Define an environment for projectitems(for projectentry)
+\newenvironment{projectitems}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-4.0mm}
+}
+
+
 %-------------------------------------------------------------------------------
 %                Commands for elements of Cover Letter
 %-------------------------------------------------------------------------------
