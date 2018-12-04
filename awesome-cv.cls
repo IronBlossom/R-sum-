@@ -199,7 +199,7 @@
 \newcommand*{\headeraddressstyle}[1]{{\fontsize{8pt}{1em}\headerfont\itshape\color{lighttext} #1}}
 \newcommand*{\headersocialstyle}[1]{{\fontsize{6.8pt}{1em}\headerfont\color{text} #1}}
 \newcommand*{\headerquotestyle}[1]{{\fontsize{9pt}{1em}\bodyfont\itshape\color{darktext} #1}}
-\newcommand*{\footerstyle}[1]{{\fontsize{8pt}{1em}\footerfont\scshape\color{lighttext} #1}}
+\newcommand*{\footerstyle}[1]{{\fontsize{6pt}{1em}\footerfont\color{lighttext} #1}}
 \newcommand*{\sectionstyle}[1]{{\fontsize{16pt}{1em}\bodyfont\bfseries\color{text}\@sectioncolor #1}}
 \newcommand*{\subsectionstyle}[1]{{\fontsize{12pt}{1em}\bodyfont\scshape\textcolor{text}{#1}}}
 \newcommand*{\paragraphstyle}{\fontsize{9pt}{1em}\bodyfontlight\upshape\color{text}}
@@ -538,11 +538,10 @@
 
 % Define a footer for CV
 % Usage: \makecvfooter{<left>}{<center>}{<right>}
-\newcommand*{\makecvfooter}[3]{%
+\newcommand*{\makecvfooter}[2]{%
   \fancyfoot{}
   \fancyfoot[L]{\footerstyle{#1}}
-  \fancyfoot[C]{\footerstyle{#2}}
-  \fancyfoot[R]{\footerstyle{#3}}
+  \fancyfoot[R]{\footerstyle{#2}}
 }
 
 % Define a section for CV
@@ -738,6 +737,58 @@
   \end{justify}
   \vspace{-4.0mm}
 }
+
+
+
+
+
+
+
+
+
+
+
+% Define an environment for skillsentry
+\newenvironment{skillsentries}{%
+  \vspace{\acvSectionContentTopSkip}
+  \begin{center}
+}{%
+  \end{center}
+}
+% Define an entry of skills information
+% Usage: \skillsentry{<position>}{<title>}{<location>}{<date>}{<description>}
+\newcommand*{\skillsentry}[2]{%
+  \vspace{-2.0mm}
+  \setlength\tabcolsep{0pt}
+  \setlength{\extrarowheight}{0pt}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{4.5cm} R{12.5cm}}
+    \ifempty{#1#2}
+    {\\}
+    {\honorpositionstyle{#1} \\}
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#2}}
+  \end{tabular*}%
+}
+
+% Define an environment for skillsitems(for skillsentry)
+\newenvironment{skillsitems}{%
+  \vspace{-4.0mm}
+  \begin{justify}
+  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
+    \setlength{\parskip}{0pt}
+    \renewcommand{\labelitemi}{\bullet}
+}{%
+  \end{itemize}
+  \end{justify}
+  \vspace{-4.0mm}
+}
+
+
+
+
+
+
+
+
 
 
 %-------------------------------------------------------------------------------
