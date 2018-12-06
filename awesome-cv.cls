@@ -807,7 +807,7 @@
 % Usage: \lettersection{<section-title>}
 \newcommand{\lettersection}[1]{%
   \lettersectionstyle{#1}
-  \par\addvspace{2.5ex}
+  \par\addvspace{2.4ex}
 }
 
 % Define a title of the cover letter
